@@ -2,19 +2,19 @@ import { useState, useEffect, useRef } from 'react';
 
 const useFavorites = () => {
   const [favorites, setFavorites] = useState([]);
-  const isFirstRender = useRef(true); // 👈 tracks first render
+  const isFirstRender = useRef(true); 
 
-  // READ — load from localStorage on mount
+  
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem('recipe-app-favs'));
     if (saved) setFavorites(saved);
   }, []);
 
-  // WRITE — save to localStorage but SKIP first render
+ 
   useEffect(() => {
     if (isFirstRender.current) {
-      isFirstRender.current = false; // 👈 mark first render as done
-      return; // 👈 skip saving on first render
+      isFirstRender.current = false; 
+      return; 
     }
     localStorage.setItem('recipe-app-favs', JSON.stringify(favorites));
   }, [favorites]);
