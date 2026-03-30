@@ -142,9 +142,9 @@ http://localhost:5173
 
 ## 👨‍💻 Author
 
-- **Name:** [Your Name]
+- **Name:** Prajwol Shrestha
 - **Course:** React Development
-- **Instructor:** [Your Teacher's Name]
+- **Instructor:** Dipak Shrestha
 
 ---
 
